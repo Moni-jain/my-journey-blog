@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #1e40af;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+  line-height: 1.7;
+}
+
+.prose ul {
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}

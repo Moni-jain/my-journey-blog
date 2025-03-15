@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway 101 - My Journey</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .prose h1 { font-size: 2.25rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 1rem; color: #1e40af; }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1e40af; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.7; }
+        .prose ul { margin-bottom: 1.25rem; list-style-type: disc; padding-left: 1.5rem; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="text-2xl font-bold text-blue-600">
+                    My Journey
+                </a>
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li>
+                            <a href="../index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../blog.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-8">
+                <div class="flex items-center mb-4">
+                    <span class="text-gray-500 mr-4">March 15, 2025</span>
+                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                        Educational
+                    </span>
+                </div>
+                <h1 class="text-3xl font-bold mb-4">Payment Gateway 101</h1>
+                <p class="text-xl text-gray-600">Ever wondered what happens when you click "Pay Now"? Today I'm breaking down how payment gateways work in simple terms, based on my experience at Inovio Payments.</p>
+            </div>
+            
+            <div class="prose max-w-none">
+                <h1>Payment Gateway 101</h1>
+
+                <p>Have you ever wondered what happens in those few seconds between clicking "Pay Now" and seeing the "Payment Successful" message? As someone who's worked extensively with payment gateways at Inovio Payments, I'd like to demystify this process for you.</p>
+
+                <h2>What is a Payment Gateway?</h2>
+
+                <p>A payment gateway is essentially the middleman between your online store and the financial institutions that process payments. Think of it as a secure bridge that connects your customer's payment information to the actual money transfer systems.</p>
+
+                <h2>The Journey of a Payment in 6 Steps</h2>
+
+                <p>When a customer clicks that "Pay Now" button, here's what happens behind the scenes:</p>
+
+                <ol>
+                    <li><strong>Encryption</strong>: First, the customer's payment information is encrypted by the payment gateway. This transforms sensitive card details into a secure format that can't be read by unauthorized parties.</li>
+                    <li><strong>Authorization Request</strong>: The encrypted payment details are sent to the merchant's bank (acquiring bank) which forwards it to the card network (Visa, Mastercard, etc.).</li>
+                    <li><strong>Card Issuer Verification</strong>: The card network routes the request to the customer's bank (issuing bank), which checks if the customer has sufficient funds and if the card hasn't been reported as stolen.</li>
+                    <li><strong>Authorization Response</strong>: The issuing bank sends back an approval or denial message, which travels back through the card network and acquiring bank to the payment gateway.</li>
+                    <li><strong>Merchant Notification</strong>: The payment gateway forwards this response to the website, which then shows the appropriate message to the customer.</li>
+                    <li><strong>Settlement</strong>: At the end of the day, the merchant submits all authorized transactions in a batch to their acquiring bank, which deposits the funds into the merchant's account (minus fees).</li>
+                </ol>
+
+                <p>This entire process typically takes just 2-3 seconds!</p>
+
+                <h2>Why Payment Gateways Matter</h2>
+
+                <p>From my experience implementing payment solutions at Inovio, I've seen firsthand how the right gateway can make or break an online business:</p>
+
+                <ul>
+                    <li><strong>Security</strong>: Payment gateways handle PCI DSS compliance, reducing the merchant's security burden</li>
+                    <li><strong>Fraud Detection</strong>: Many gateways offer built-in fraud screening tools</li>
+                    <li><strong>Multiple Payment Methods</strong>: Beyond credit cards, gateways can process ACH transfers, digital wallets, and alternative payment methods</li>
+                    <li><strong>Global Reach</strong>: Advanced gateways support multiple currencies and region-specific payment methods</li>
+                </ul>
+
+                <h2>Common Challenges and Solutions</h2>
+
+                <p>During my time at Inovio, we encountered several common issues that merchants face:</p>
+
+                <p><strong>Challenge</strong>: High decline rates<br>
+                <strong>Solution</strong>: Implement automatic retries with intelligent routing to alternative processors</p>
+
+                <p><strong>Challenge</strong>: Cart abandonment during checkout<br>
+                <strong>Solution</strong>: Streamline the payment form and reduce required fields to the minimum</p>
+
+                <p><strong>Challenge</strong>: International payment acceptance<br>
+                <strong>Solution</strong>: Partner with gateways that specialize in specific regions or offer local payment methods</p>
+
+                <h2>Choosing the Right Gateway</h2>
+
+                <p>If you're selecting a payment gateway for your business, consider these factors:</p>
+
+                <ol>
+                    <li>Transaction fees and pricing structure</li>
+                    <li>Supported payment methods</li>
+                    <li>Integration complexity</li>
+                    <li>Security features</li>
+                    <li>Customer support quality</li>
+                    <li>Settlement timeframes</li>
+                </ol>
+
+                <h2>Final Thoughts</h2>
+
+                <p>Payment gateways may seem like just another piece of technical infrastructure, but they're the unsung heroes of e-commerce. A well-implemented gateway provides security, reliability, and flexibility that directly impacts your bottom line.</p>
+
+                <p>In future posts, I'll dive deeper into specific aspects of payment processing, including tokenization, 3D Secure authentication, and recurring billing strategies.</p>
+
+                <p>Have questions about payment gateways? Feel free to reach out through the contact form!</p>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t">
+                <h3 class="text-xl font-bold mb-4">Share this article</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-blue-600 hover:text-blue-800">Twitter</a>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
+                    <a href="#" class="text-blue-600 hover:text-blue-800">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">My Journey</h3>
+                    <p class="text-gray-300">
+                        Sharing insights and expertise from 17+ years in the payment industry.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="../index.html" class="text-gray-300 hover:text-white transition-colors">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../blog.html" class="text-gray-300 hover:text-white transition-colors">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about.html" class="text-gray-300 hover:text-white transition-colors">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact.html" class="text-gray-300 hover:text-white transition-colors">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="https://linkedin.com" class="text-gray-300 hover:text-white transition-colors">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" class="text-gray-300 hover:text-white transition-colors">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../newsletter.html" class="text-gray-300 hover:text-white transition-colors">
+                                Newsletter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 My Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
